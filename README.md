@@ -290,7 +290,7 @@ This application implements the following features:
 8. **Get the Deployed Link:**
     *   Netlify will automatically build and deploy your site.
     *   Once the deployment is complete, you'll be given a unique URL for your live application (e.g., `https://<random-name>.netlify.app`). You can customize this URL in your Netlify site settings.
-    *   **Published URL:** [https://stellar-seahorse-b5ccc0.netlify.app/](https://stellar-seahorse-b5ccc0.netlify.app/)
+    *   **Published URL:** [https://userdirectoryassignment.netlify.app/](https://userdirectoryassignment.netlify.app/)
 
 **Note:**
 
