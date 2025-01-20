@@ -27,7 +27,7 @@ const Home = () => {
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
-    setCurrentPage(1); // Reset to first page when search changes
+    setCurrentPage(1); 
   };
 
   const handleSortToggle = () => {
