@@ -1,9 +1,7 @@
-// Action Types
 export const FETCH_USERS_REQUEST = 'FETCH_USERS_REQUEST'
 export const FETCH_USERS_SUCCESS = 'FETCH_USERS_SUCCESS'
 export const FETCH_USERS_FAILURE = 'FETCH_USERS_FAILURE'
 
-// Action Creators
 export const fetchUsersRequest = () => ({
   type: FETCH_USERS_REQUEST,
 })
@@ -18,7 +16,6 @@ export const fetchUsersFailure = error => ({
   payload: error,
 })
 
-// Async Action Creator
 export const fetchUsers = () => {
   return dispatch => {
     dispatch(fetchUsersRequest())
