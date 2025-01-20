@@ -2,6 +2,7 @@ React User Directory
 
 I created this project as a React application that fetches and displays a list of users from the https://jsonplaceholder.typicode.com/users API. It includes features for searching, filtering, viewing user details, dark/light mode toggle, and pagination.
 
+
 Table of Contents
 
 [Features]
@@ -21,6 +22,8 @@ Table of Contents
 [Bonus Features]
 
 [Deployment on Netlify]
+
+
 
 Features
 
