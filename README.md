@@ -1,248 +1,391 @@
-# React User Directory
+React User Directory
 
-This project is a React application that fetches and displays a list of users from the [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users) API. It includes features for searching, filtering, viewing user details, dark/light mode toggle, and pagination.
+I created this project as a React application that fetches and displays a list of users from the https://jsonplaceholder.typicode.com/users API. It includes features for searching, filtering, viewing user details, dark/light mode toggle, and pagination.
 
-## Table of Contents
+Table of Contents
 
-*   [Features](#features)
-*   [Project Setup](#project-setup)
-    *   [Prerequisites](#prerequisites)
-    *   [Creating the Project](#creating-the-project)
-    *   [Installing Dependencies](#installing-dependencies)
-    *   [Running the Application](#running-the-application)
-*   [Troubleshooting](#troubleshooting)
-    *   [504 Gateway Timeout Error](#504-gateway-timeout-error)
-    *   [502 Bad Gateway Error](#502-bad-gateway-error)
-    *   [ESLint Errors/Warnings](#eslint-errorswarnings)
-    *   [Babel Issues](#babel-issues)
-*   [Technologies Used](#technologies-used)
-*   [Features Implemented](#features-implemented)
-    *   [Core Features](#core-features)
-    *   [Bonus Features](#bonus-features)
-*   [Deployment](#deployment)
-*   [Submission Guidelines](#submission-guidelines)
+[Features]
 
-## Features
+[Project Setup]
+
+[Prerequisites]
+
+[Step-by-Step Instructions]
+
+[Technologies Used]
+
+[Features Implemented]
+
+[Core Features]
+
+[Bonus Features]
+
+[Deployment on Netlify]
+
+Features
 
 This application implements the following features:
 
-### Core Features
+Core Features
 
-*   **Fetches user data:** Retrieves user data from the [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users) API on application load.
-*   **Displays user list:** Presents a list of users, showing their name, email, and city.
-*   **Search functionality:** Allows users to filter the list by name using a search bar.
-*   **Sorting:** Enables sorting of the user list in ascending (A-Z) and descending (Z-A) order by name.
-*   **User detail view:** Clicking on a user navigates to a separate page displaying the user's full details (name, email, phone, company name, website).
-*   **"Go Back" button:** On the user detail page, a "Go Back" button allows users to return to the main list.
-*   **Responsive design:** Adapts the layout for optimal viewing on both mobile and desktop devices.
+Fetches user data: I retrieve user data from the https://jsonplaceholder.typicode.com/users API when the application loads.
 
-### Bonus Features
+Displays user list: I present a list of users, showing their name, email, and city.
 
-*   **Dark/light mode toggle:** Implements a toggle to switch between dark and light themes using the React Context API and Material UI's theming capabilities.
-*   **Pagination:** Supports pagination of the user list to handle larger datasets efficiently.
+Search functionality: I allow filtering of the list by name using a search bar.
 
-## Project Setup
+Sorting: I enable sorting of the user list in ascending (A-Z) and descending (Z-A) order by name.
 
-### Prerequisites
+User detail view: Clicking on a user navigates to a separate page where I display the user's full details (name, email, phone, company name, website).
 
-*   **Node.js:** Ensure that you have Node.js installed on your system. You can download it from [https://nodejs.org/](https://nodejs.org/). Version 16 or higher is recommended.
-*   **npm:** This project uses `npm` as the package manager, which comes bundled with Node.js.
+"Go Back" button: On the user detail page, I provide a "Go Back" button to return to the main list.
 
-### Creating the Project
+Responsive design: I ensure the layout adapts for optimal viewing on both mobile and desktop devices.
 
-1. **Create a new React project using Create React App:**
+Bonus Features
 
-    ```bash
-    npx create-react-app user-directory
-    ```
+Dark/light mode toggle: I implement a toggle to switch between dark and light themes using the React Context API and Material UI's theming capabilities.
 
-2. **Navigate to the project directory:**
+Pagination: I support pagination of the user list to handle larger datasets efficiently.
 
-    ```bash
-    cd user-directory
-    ```
+Project Setup
 
-### Installing Dependencies
+Prerequisites
 
-1. **Install the necessary dependencies using `npm`:**
+Node.js: I ensure Node.js is installed on the system. It can be downloaded from https://nodejs.org/. Version 16 or higher is recommended.
 
-    *   **React Router:** For navigation between pages.
+npm: I use npm (Node Package Manager) as the package manager, which comes bundled with Node.js.
 
-        ```bash
-        npm install react-router-dom
-        ```
+Step-by-Step Instructions
 
-    *   **Redux:** For state management.
+Create Project Directory:
 
-        ```bash
-        npm install redux react-redux
-        ```
+I created a new directory for the project and navigated into it using the terminal:
 
-    *   **Material UI:** For styling and components.
+mkdir user-directory
+cd user-directory
 
-        ```bash
-        npm install @mui/material @emotion/react @emotion/styled
-        ```
+Initialize React Project:
 
-### Running the Application
+I initialized a new React project using Create React App:
 
-1. Start the development server:
+npx create-react-app .
 
-    ```bash
-    npm start
-    ```
+(The . indicates that the project should be created in the current directory.)
 
-    This command will start the React development server and open the application in your default web browser (usually at  `http://localhost:3000`).
+Install Dependencies:
 
-## Troubleshooting
+I installed the necessary dependencies using npm:
 
-This section outlines common issues encountered during development and their solutions:
+React Router: For navigation.
 
-### 504 Gateway Timeout Error
+npm install react-router-dom
 
-*   **Issue:** The application fails to load and displays a "504 Gateway Timeout" error.
-*   **Solution:** This is often a temporary issue with the CCBP environment.
-    *   Wait for some time (e.g., 15-30 minutes) and try again.
-    *   Contact CCBP support if the problem persists.
+Redux: For state management.
 
-### 502 Bad Gateway Error
+npm install redux react-redux
 
-*   **Issue:** The application fails to load and displays a "502 Bad Gateway" error.
-*   **Solution:** Similar to the 504 error, this is usually a temporary issue with the CCBP environment.
-    *   Wait and retry.
-    *   Contact CCBP support if the problem persists.
+Redux Thunk: For handling asynchronous actions in Redux.
 
-### ESLint Errors/Warnings
+npm install redux-thunk
 
-*   **Issue:** Compilation errors or warnings from ESLint (e.g., `react/jsx-no-undef`, `no-unused-vars`).
-*   **Solution:**
-    *   **`react/jsx-no-undef`:** Ensure that you have imported the necessary components or variables correctly. For example, if using `Switch` from Material UI, make sure you have `import { Switch } from '@mui/material';`.
-    *   **`no-unused-vars`:** Remove any unused variables or imports from your code.
+Material UI: For styling and UI components.
 
-### Babel Issues
+npm install @mui/material @emotion/react @emotion/styled
 
-*   **Issue:** Errors related to Babel, such as "Identifier '...' has already been declared."
-*   **Solution:**
-    *   Ensure that you are not importing the same module or variable multiple times in the same file.
-    *   Review your import statements and remove any duplicates.
+Project Structure:
 
-## Technologies Used
+I organized the project with the following recommended folder structure (inside the src folder):
 
-*   **React.js:** JavaScript library for building user interfaces.
-*   **React Router:** Declarative routing for React applications.
-*   **Material UI:** React component library for implementing Material Design.
-*   **Redux:** State management library for predictable state updates.
-*   **Redux Thunk:** Middleware for handling asynchronous actions in Redux.
-*   **npm:** Package manager for JavaScript.
-*   **Create React App:** Used for scaffolding the initial project structure (no longer actively maintained).
+src/
+├── components/
+│   ├── Home.js
+│   ├── UserDetail.js
+│   └── common/
+│       ├── SearchBar.js
+│       ├── SortButton.js
+│       ├── ThemeToggle.js (Bonus)
+│       └── Pagination.js (Bonus)
+├── context/
+│   └── ThemeContext.js (Bonus)
+├── redux/
+│   ├── actions/
+│   │   └── userActions.js
+│   ├── reducers/
+│   │   ├── userReducer.js
+│   │   └── index.js
+│   └── store.js
+├── App.js
+├── index.js
+└── index.css
 
-## Features Implemented
+Implement Redux (State Management):
 
-### Core Features
+src/redux/actions/userActions.js:
 
-*   **Data Fetching:**
-    *   Fetches user data from the  `https://jsonplaceholder.typicode.com/users`  API using the  `fetch`  API.
-    *   Implements error handling to catch network errors and display appropriate messages to the user.
-    *   Uses Redux Thunk to manage asynchronous data fetching in Redux actions.
-*   **User List Display:**
-    *   Displays a list of users with their name, email, and city.
-    *   Uses Material UI components (`List`,  `ListItem`,  `ListItemText`) for presentation.
-*   **Search Functionality:**
-    *   Provides a search bar to filter the user list by name.
-    *   Filters the list in real-time as the user types.
-    *   Uses a  `TextField`  component from Material UI for the search input.
-*   **Sorting:**
-    *   Allows sorting the user list by name in ascending (A-Z) or descending (Z-A) order.
-    *   Implements sorting logic using JavaScript's  `sort`  method.
-*   **User Detail View:**
-    *   Navigates to a separate page when a user is clicked, displaying the user's full details.
-    *   Uses React Router for navigation.
-    *   Fetches and displays additional user details (phone, company name, website) on the detail page.
-    *   Provides a "Go Back" button to return to the main list.
-*   **Responsive Design:**
-    *   Uses Material UI's responsive grid system (`Grid`) to ensure the application adapts to different screen sizes.
+I defined action types (e.g., FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE).
 
-### Bonus Features
+I created action creators for fetching users, handling success, and handling errors.
 
-*   **Dark/Light Mode Toggle:**
-    *   Implements a toggle to switch between dark and light themes.
-    *   Uses React Context API to manage the theme state globally.
-    *   Uses Material UI's  `createTheme`  and  `ThemeProvider`  to apply the selected theme to components.
-    *   Uses a  `Switch`  component from Material UI for the toggle.
-*   **Pagination:**
-    *   Implements pagination to handle larger datasets efficiently.
-    *   Displays a limited number of users per page (e.g., 5).
-    *   Provides controls to navigate between pages.
-    *   Uses a  `Pagination`  component from Material UI for pagination controls.
+I implemented the asynchronous action creator fetchUsers to fetch data from the API using fetch.
 
-## Deployment
+src/redux/reducers/userReducer.js:
 
-This project can be deployed to platforms like Netlify or Vercel. Here are the general steps:
+I created a userReducer to handle the actions and update the state accordingly (e.g., store the fetched users, loading state, error state).
 
-**Prerequisites:**
+src/redux/reducers/index.js:
 
-*   A GitHub account.
-*   A Netlify or Vercel account.
+I combined reducers (if there are multiple reducers) using combineReducers from Redux.
 
-**Steps:**
+src/redux/store.js:
 
-1. **Initialize a Git Repository:**
+I created the Redux store using createStore from Redux.
 
-    ```bash
-    git init
-    git add .
-    git commit -m "Initial commit"
-    ```
-2. **Create a GitHub Repository:**
-    *   Create a new repository on GitHub (public or private).
-    *   **Do not** initialize it with a `README.md` (you already have one).
+I applied the thunk middleware using applyMiddleware.
 
-3. **Push to GitHub:**
+src/index.js:
 
-    ```bash
-    git remote add origin <your-github-repo-url>
-    git branch -M main
-    git push -u origin main
-    ```
+I wrapped the App component with the Provider from react-redux and passed the store as a prop.
 
-    Replace  `<your-github-repo-url>`  with the URL of your GitHub repository.
+Create Components:
 
-### Deployment to Netlify
+src/components/Home.js:
 
-1. **Log in to Netlify:**  Go to [https://www.netlify.com/](https://www.netlify.com/) and log in or sign up.
-2. **New Site from Git:**  Click the "New site from Git" button.
-3. **Connect to GitHub:**  Choose GitHub as your Git provider and authorize Netlify to access your repositories.
-4. **Select Repository:**  Select your project's repository from the list.
-5. **Configure Build Settings:**
-    *   **Branch to deploy:**  `main`  (or your main branch)
-    *   **Build command:**  `npm run build`
-    *   **Publish directory:**  `build`
-6. **Deploy Site:**  Click the "Deploy site" button.
+I connected the component to the Redux store using useDispatch and useSelector.
 
-### Deployment to Vercel
+I dispatched the fetchUsers action in a useEffect hook.
 
-1. **Log in to Vercel:**  Go to [https://vercel.com/](https://vercel.com/) and log in or sign up.
-2. **Import Project:**  Click the "Import Project" button.
-3. **Connect to GitHub:**  Choose GitHub as your Git provider and authorize Vercel to access your repositories.
-4. **Select Repository:**  Select your project's repository from the list.
-5. **Configure Project:**
-    *   Vercel should automatically detect that it's a React project.
-    *   **Build Command:**  `npm run build`
-    *   **Output directory:**  `build`
-6. **Deploy:**  Click the "Deploy" button.
+I displayed the list of users, handling loading and error states.
 
-**Note:**
+I implemented search functionality using a TextField (from Material UI) and filtering logic.
 
-*   Replace placeholder values (repository URLs, branch names) with your actual information.
-*   After deployment, you will get a live URL for your application.
+I implemented sorting functionality using a button or other control and sorting logic.
 
-## Submission Guidelines
+I added pagination using the Pagination component (from Material UI).
 
-*   **Upload to GitHub:** Ensure your project is pushed to a GitHub repository.
-*   **README.md File:** Include a `README.md` file in your GitHub repository that describes:
-    *   Project setup
-    *   Steps to run the project locally
-    *   Features implemented
-*   **Format:**
-    *   Provide the GitHub repository link.
-    *   Ensure the project is clearly documented and easy to navigate.
+I used Link from react-router-dom to make each user item navigate to the UserDetail page.
+
+src/components/UserDetail.js:
+
+I connected the component to the Redux store (if needed).
+
+I got the userId from the route parameters using useParams from react-router-dom.
+
+I fetched or filtered the user data based on the userId.
+
+I displayed the user's details.
+
+I added a "Go Back" button that uses navigate from react-router-dom to go back to the home page.
+
+src/components/common/ThemeToggle.js (Bonus):
+
+I created a toggle component (e.g., using a Switch from Material UI) to switch between dark and light modes.
+
+I used the ThemeContext to update the theme state.
+
+src/components/common/Pagination.js (Bonus):
+
+I created a pagination component using the Pagination component from Material UI.
+
+I handled page changes and updated the current page state in the Home component.
+
+Implement Routing:
+
+src/App.js:
+
+I imported BrowserRouter, Routes, and Route from react-router-dom.
+
+I wrapped the application with BrowserRouter.
+
+I defined routes using Routes and Route:
+
+/: Render the Home component.
+
+/user/:userId: Render the UserDetail component.
+
+I wrapped the entire app with MuiThemeProvider and ThemeProvider for using dark mode.
+
+I used AppBar, Toolbar, Typography, and Switch for dark mode implementation.
+
+I imported createTheme from @mui/material/styles.
+
+I created dark and light themes using createTheme.
+
+Styling:
+
+I used Material UI components for styling and layout.
+
+I added custom CSS in src/index.css or used styled-components if preferred.
+
+Implement Dark/Light Mode (Bonus):
+
+src/context/ThemeContext.js:
+
+I created a ThemeContext using createContext from React.
+
+I created a ThemeProvider component to manage the dark/light mode state using useState.
+
+I provided the theme state and a toggleTheme function through the context.
+
+src/App.js:
+
+I wrapped the application with the ThemeProvider from the context created.
+
+I consumed the theme state from the context and passed it to the ThemeProvider from Material UI.
+
+Run the Application:
+
+I started the development server:
+
+npm start
+
+Technologies Used
+
+React.js: JavaScript library for building user interfaces.
+
+React Router: Declarative routing for React applications.
+
+Material UI: React component library for implementing Material Design.
+
+Redux: State management library for predictable state updates.
+
+Redux Thunk: Middleware for handling asynchronous actions in Redux.
+
+npm: Package manager for JavaScript.
+
+Create React App: Used for scaffolding the initial project structure (no longer actively maintained).
+
+Features Implemented
+
+Core Features
+
+Data Fetching:
+
+I fetched user data from the https://jsonplaceholder.typicode.com/users API using the fetch API.
+
+I used useEffect to trigger the fetch when the Home component mounts.
+
+I handled loading and error states to provide feedback to the user.
+
+I dispatched Redux actions to update the store with fetched data or errors.
+
+User List Display:
+
+I displayed a list of users with their name, email, and city.
+
+I used Material UI components (List, ListItem, ListItemText) for presentation.
+
+I iterated over the fetched user data and rendered a ListItem for each user.
+
+Search Functionality:
+
+I provided a search bar using a TextField component from Material UI.
+
+I filtered the user list based on the search input in real-time using the filter method.
+
+I updated the displayed list whenever the search input changes.
+
+Sorting:
+
+I allowed sorting the user list by name in ascending (A-Z) or descending (Z-A) order.
+
+I used a button or toggle to change the sorting order.
+
+I sorted the user data using the sort method based on the selected order.
+
+User Detail View:
+
+I navigated to a separate page (/user/:userId) when a user is clicked.
+
+I used Link from react-router-dom to create clickable user items.
+
+I used useParams to extract the userId from the URL in the UserDetail component.
+
+I fetched or filtered the user data based on the userId to display detailed information.
+
+I provided a "Go Back" button that uses navigate from react-router-dom to return to the home page.
+
+Responsive Design:
+
+I used Material UI's Grid component to create a responsive layout that adapts to different screen sizes.
+
+Bonus Features
+
+Dark/Light Mode Toggle:
+
+I implemented a toggle to switch between dark and light themes using a Switch component from Material UI.
+
+I used the React Context API (createContext, useContext) to manage the theme state globally.
+
+I created a ThemeContext and a ThemeProvider component to provide the current theme and a function to toggle it.
+
+I used Material UI's createTheme to define the dark and light themes.
+
+I used ThemeProvider from @mui/material/styles to apply the selected theme to the application.
+
+I consumed the theme context in components that need to adapt to the theme (e.g., ThemeToggle, Home, UserDetail).
+
+Pagination:
+
+I implemented pagination to handle larger datasets efficiently.
+
+I displayed a limited number of users per page (e.g., 5).
+
+I used the Pagination component from Material UI to provide navigation between pages.
+
+I calculated the start and end indices for slicing the user data based on the current page.
+
+I updated the current page state when the user interacts with the pagination controls.
+
+Deployment on Netlify
+
+Prerequisites:
+
+A GitHub account.
+
+A Netlify account.
+
+Steps:
+
+Push Code to GitHub:
+
+I made sure the code is committed and pushed to a GitHub repository.
+
+Log in to Netlify:
+
+I went to  https://www.netlify.com/  and logged in or signed up.
+
+New Site from Git:
+
+I clicked the "New site from Git" button.
+
+Connect to GitHub:
+
+I chose GitHub as the Git provider and authorized Netlify to access the repositories.
+
+Select Repository:
+
+I selected the project's repository from the list.
+
+Configure Build Settings:
+
+Branch to deploy:  main  (or the main branch)
+
+Build command:  npm run build
+
+Publish directory:  build
+
+Deploy Site:
+
+I clicked the "Deploy site" button.
+
+Get the Deployed Link:
+
+Netlify automatically built and deployed the site.
+
+Once the deployment was complete, I received a unique URL for the live application: https://stellar-seahorse-b5ccc0.netlify.app/.
+
+Note:
+
+After the initial deployment, Netlify automatically rebuilds and redeploys the site whenever changes are pushed to the GitHub repository's main branch.
+
